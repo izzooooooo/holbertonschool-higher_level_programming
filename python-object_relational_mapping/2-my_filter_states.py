@@ -43,4 +43,4 @@ if __name__ == "__main__":
 
     # Bağlantıları qapadırıq
     cursor.close()
-    db.close()
+    db.close(
