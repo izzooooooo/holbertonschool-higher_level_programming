@@ -1,2 +1,9 @@
-cat 16-shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+-- shows and genre!
+-- select show.title, genre.name from joined tables
+SELECT tv_shows.title, tv_genres.name
+FROM tv_shows
+LEFT JOIN tv_show_genres ON tv_show_genres.show_id = tv_shows.id
+LEFT JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
+ORDER BY tv_shows.title, tv_genres.name
+;
 
